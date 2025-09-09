@@ -19,4 +19,16 @@ public class Multiples {
         }
         return count;
     }
+    public static int multiples() {
+        int count = 0;
+        for (int i=1; i<1000; i++){
+            boolean isDivisiblea = i%3==0;
+            boolean isDivisibleb = i%5==0;
+
+            if (isDivisiblea || isDivisibleb){
+                count++;
+            }
+        }
+        return count;
+    }
 }
