@@ -1,16 +1,22 @@
 package lab1;
 
 public class Multiples {
-    public static void main(String[] args) {
-        int count = 0;
-        for (int i=1; i<1000; i++){
-            boolean isDivisible3 = i%3==0;
-            boolean isDivisible5 = i%5==0;
+    public static void main(int n, int a, int b) {
 
-            if (isDivisible3 || isDivisible5){
+        int count = multiples(n, a, b);
+        System.out.println(count);
+    }
+
+    static int multiples(int n, int a, int b) {
+        int count = 0;
+        for (int i=1; i<n; i++){
+            boolean isDivisiblea = i%a==0;
+            boolean isDivisibleb = i%b==0;
+
+            if (isDivisiblea || isDivisibleb){
                 count++;
             }
         }
-        System.out.println(count);
+        return count;
     }
 }
